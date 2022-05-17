@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
+:root{
+    --main-color: #0a0a0a;
+    --black:#13131a;
+    --bg:#d6d6d6;
+    --border:#d6d6d6;
+}
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: rgb(26, 25, 25);
+    border-radius: 5rem;
+}
+/*website full body color*/
+body{
+    background:rgb(54, 54, 54);
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--bg);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: .2rem;
+}
+section{
+    padding: 2rem 7%;
+}
+
+.heading{
+    text-align: center;
+    color: rgb(10, 10, 10);
+    text-transform: uppercase;
+    padding-bottom: 2.5rem;
+    font-size: 4rem;
+}
+
+.heading span{
+    color: var(--bg);
+    text-transform: uppercase;
+}
+
+/*header customization*/
+.header{
+    background: #aaaaaa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7% ;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 800;
+}
+
+.header .logo img{
+    height: 11rem;
+}
+/* subtitle custumization*/
+.header .navbar  a{
+    margin: 0 1rem;
+    font-size: 2.5rem;
+    color: var(--main-color);
+}
+/*hover affect on subtitles*/
+.header .navbar  a:hover{
+    color:rgb(255, 187, 0);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+/*Icon customization*/
+.header .icons a{
+    color: var(--main-color);
+    cursor: pointer;
+    font-size: 3.5rem;
+    margin-left: 2rem;
+}
+/*Icon hover customization*/
+.header .icons div:hover{
+    color:var(--main-color);
+}
+
+#menu-btn{
+    display: none;
+}
+
+
+
+
+/*Need a new home picture!!!!*/
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/homepage.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: rgb(255, 166, 0);
+    font-family: 'Nanum Myeongjo', serif;
+    margin-right: auto;
+}
+
+.home .content p{
+    font-size: 2rem;
+   font-weight: lighter;
+   line-height: 1.8;
+   padding: 1rem 0;
+    color: rgb(255, 248, 248);
+}
+/*Home section ends*/
+
+.about{
+    background: var(--black);
+}
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+    flex-wrap: wrap;
+}
+
+.about .row .image{
+    flex: 1 1 45rem;
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    font-size: 3rem;
+    color: rgb(14, 13, 13);
+
+}
+
+.about .row .content p{
+    font-size: 1.6rem;
+    color: rgb(15, 15, 15);
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/*Style sheet for the menu section*/
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--black);
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+
+.menu .box-container .box:hover{
+    background: #aaaaaa;
+}
+
+.menu .box-container .box:hover > *{
+    color: var(--black);
+}
+
+/*End of stylesheet for the menu page*/
+.drinks .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.drinks .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border: var(--black);
+}
+
+.drinks .box-container .box img{
+    height: 10rem;
+}
+
+.drinks .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.drinks .box-container .box .price{
+    color: #fff;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+
+
+.drinks .box-container .box:hover{
+    background: #aaaaaa;
+}
+
+.drinks .box-container .box:hover > *{
+    color: var(--black);
+}
+
+/*Stylesheet for contact section begins */
+.contact{
+    background: var(--black)
+}
+.contact .row{
+    display: flex;
+    background: var(--black);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contact .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color:rgb(255, 187, 0);
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: rgb(255, 187, 0);
+    border: rgb(255, 187, 0);
+}
+
+
+.contact.row form .inputBox span{
+    color: #fff;
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.contact .row form .inputBox input{
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+
+.contact .row form  h4{
+    font-size: 2rem;
+}
+
+.contact .row form h5{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact .row form h6{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.contact .row form h7{
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+
+/*Stylesheet for contact section ends */
+
+
+
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    padding: 1rem 0;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: #fff;
+    border: var(--border);
+    margin: .3rem;
+    border-radius: 50%;
+}
+
+.footer .share a:hover{
+    background-color: rgb(255, 187, 0);
+}
+
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap: 1rem;
+}
+
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #fff;
+    border: var(--border);
+    font-size: 2rem;
+}
+
+.footer .links a:hover{
+    color: rgb(255, 187, 0);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: lighter;
+    padding: 1.5rem;
+}
+
+
+.footer .credit span{
+    color: rgb(255, 187, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile phone view*/
+@media (max-width:991px){
+    html{
+        font-size: 100%;
+    }
+
+    .header{
+        padding: .1rem;
+        padding-bottom: .1rem;
+    }
+    section{
+        padding: 1rem;
+    }
+    
+}
+
+/*@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: 40rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar .active{
+        right: 0;
+    }
+/*adjusts mobile nav bar*/
+ /*   .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+}
+*/
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }   
+}
